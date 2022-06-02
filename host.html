@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="host.css">
+    <link href="http://fonts.cdnfonts.com/css/open-sans" rel="stylesheet">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+    <title>HOST SISTEMAS</title>
+</head>
+
+<body>
+    <div id="main-container">
+    <header>
+        <!--cabeçalho do site-->
+        <div class="header">
+            <div class="box-header"></div>
+            <!--caixa preta no cabeçalho-->
+            <div class="list-box">
+                <ul id="list">
+                    <li><a href="#image-header" style="text-decoration:none">HOME</a></li>
+                    <li><a href="#serviços" style="text-decoration:none">SERVIÇOS</a></li>
+                    <li><a href="#imagem-rodape" style="text-decoration:none">SOBRE</a></li>
+                    <li><a href="#black-bar" style="text-decoration:none">CONTATO</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--Imagem capa cabeçalho-->
+        <div id="image-header">
+            <img src="capa1.jpg">
+        </div>
+        <h1 id="inicio">HOST SISTEMAS</h1>
+
+    </header>
+    <!--serviços-->
+
+    <div class="container-serviços">
+        <div id="serviços" data-anime="right">
+            <img id="teste" src="teste.png">
+            <img id="teste1" src="teste1.png">
+            <img id="teste2" src="teste2.png">
+        </div>
+    </div>
+
+    <!--depoimentos-->
+    <div class="depoimentos" data-anime="left">
+        <img id="imagem-rodape" src="capa2.jpg">
+        <div class="cliente1">
+            <div class="cliente1-description">
+                <p>CLIENTE 1</p>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+                    Curabitur commodo commodo tortor. Nulla ultricies eros<br>
+                    ac metus commodo pulvinar. Cras a scelerisque mi, sed sodales nisi". </p>
+            </div>
+        </div>
+        <div class="cliente2">
+            <div class="cliente2-description">
+                <p>CLIENTE 2</p>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+                    Cras quis ligula massa. Duis ultricies lorem, ut mollis<br>
+                    bibendum vel massa in, condimentum porta purus". </p>
+            </div>
+        </div>
+    </div>
+
+    <!--BARRA CONTATOS-->
+    <div id="black-bar"> </div>
+    <!--CONTATO-->
+    <div id="contato">
+        <div id="text-contato">
+            <p class="session-contato"> AV.ENDEREÇO FICTÍCIO - 342</p>
+            <p class="session-contato"> (48) 00000-0000</p>
+        </div>
+        <p id="Host">Host © 2012 - 2022. Todos os direitos reservados.</p>
+    </div>
+    <!--CONTAINER FORMULÁRIO-->
+    <div id="form" data-anime="left">
+        <p id="contact">CONTATE-NOS</p>
+        <!--FORMULÁRIO-->
+        <form class="text" action="host.html" method="POST">
+            <input class="name" type="text" name="nome" placeholder="Digite o seu nome">
+            <input class="email" type="email" name="email" placeholder="Digite o seu e-mail">
+            <textarea class="textarea" rows="10" cols="55" placeholder="Digite sua mensagem"> </textarea>
+        </form>
+        <!--BOTÃO ENVIAR-->
+        <input id="bottom" class="submit" type="submit" name="bottom">
+
+
+    </div>
+
+
+</div>
+    <script>
+
+        const target = document.querySelectorAll("[data-anime]");
+        const animationClass = "animate";
+
+        function animeScroll() {
+            const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 9);
+            target.forEach(function (element) {
+                if ((windowTop) > element.offsetTop) {
+                    element.classList.add(animationClass);
+                } else {
+                    element.classList.remove(animationClass);
+                }
+            })
+        }
+
+        animeScroll();
+        document.addEventListener("scroll", (function () {
+            animeScroll();
+        }));
+
+    </script>
+</body>
+
+</html>
