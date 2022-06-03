@@ -218,14 +218,6 @@ a:visited {
     color:#fff;
 }
 
-
-/*FAZER DIV PRETA EM BAIXO PARA COLOCAR AS INFORMAÇÕES DE CONTATO*/
-/*FAZER FORMULÁRIO DE CONTATO*/
-
-/*FAZER ANIMAÇÃO DE LOAD NA IMAGEM INICIAL*/
-
-
-
 /*ANIMAÇÃO*/
 [data-anime] {
     opacity: 0;
@@ -245,8 +237,3 @@ a:visited {
     transform: translate3d(0px, 0px, 0px);
 }
 
-@media screen and (max-width: 760px){
-
-
-
-}
